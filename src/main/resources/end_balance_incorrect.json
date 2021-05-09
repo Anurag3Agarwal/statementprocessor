@@ -1,0 +1,18 @@
+[
+  {
+    "transactionReference": 1000,
+    "accountNumber": "RB1234",
+    "startBalance": 1234,
+    "mutation": "+100",
+    "description": "testAccount",
+    "endBalance": 1334
+  },
+  {
+    "transactionReference": 1001,
+    "accountNumber": "RB1235",
+    "startBalance": 100,
+    "mutation": "-100",
+    "description": "test",
+    "endBalance": 901
+  }
+]
