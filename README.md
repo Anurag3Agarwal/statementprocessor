@@ -16,7 +16,7 @@ For running the application `mvn spring-boot:run`
 
 ## How to test
 
-Download the scenarios file from the resource folder, pass it as the body of POST request http://localhost:8080/customer-statements/v1/process with key file.
+Download the scenarios file from the resource folder, pass it as the body of POST request http://localhost:8080/customer-statements/v1/process with key file and value as one of the files downloaded.
 
 ## Design Decisions
 
