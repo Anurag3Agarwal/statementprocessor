@@ -52,7 +52,7 @@ public class StatementProcessorServiceImpl implements StatementProcessorService 
      * @return StatementProcessorApiResponse
      * @throws Throwable
      */
-    private StatementProcessorApiResponse handleRespone(JobExecution run) throws Throwable {
+    public StatementProcessorApiResponse handleRespone(JobExecution run) throws Throwable {
         if (run.getStatus() == BatchStatus.COMPLETED) {
             List<ErrorRecord> failedRecords =
                     (List<ErrorRecord>) run.getExecutionContext().get("Failed_records");

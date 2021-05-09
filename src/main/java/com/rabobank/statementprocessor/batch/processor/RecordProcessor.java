@@ -9,6 +9,7 @@ import org.springframework.batch.core.StepExecution;
 import org.springframework.batch.core.annotation.BeforeStep;
 import org.springframework.batch.item.ItemProcessor;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -72,7 +73,8 @@ public class RecordProcessor implements ItemProcessor<List<Record>, List<Record>
         }
         jobExecution.getExecutionContext().put("Failed_records", errorRecords);
         jobExecution.getExecutionContext().put("status", status);
-
-        return records;
+        List validRecords = new ArrayList(records);
+        validRecords.removeIf(record -> invalidRecords.contains(record));
+        return validRecords;
     }
 }
