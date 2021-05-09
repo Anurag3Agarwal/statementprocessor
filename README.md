@@ -8,6 +8,8 @@ assignment.
 
 ## Steps to run the application
 
+Clone the application using the URL https://github.com/Anurag3Agarwal/statementprocessor.git
+
 Build the Application using Maven `mvn clean install`
 
 Run Unit Test `mvn clean test`
