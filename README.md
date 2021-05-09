@@ -16,7 +16,9 @@ For running the application `mvn spring-boot:run`
 
 ## How to test
 
-Download the scenarios file from the resource folder, pass it as the body of POST request http://localhost:8080/customer-statements/v1/process with key file and value as one of the files downloaded.
+Download the scenarios file from the resource folder, pass it as the body of POST request http://localhost:8080/customer-statements/v1/process with key file and value as one of the files downloaded via tools like POSTMAN. Json Response with status and error records, if any, is rendered.
+
+Optional : H2 console is available at http://localhost:8080/h2-console/login.do to verify the 
 
 ## Design Decisions
 
@@ -28,3 +30,4 @@ Download the scenarios file from the resource folder, pass it as the body of POS
 1) In production like environment, it is better to read from a NFS location instead of passing the file as POST request.
 2) For huge files, it would be better to make use of taskexecutor in Batch Step.
 3) We can integrate the application with Grafana and ELK for better monitoring.
+4) In memory DB is used in the project for simplicity, in higher enviroments we can use an enterprise offering. 
